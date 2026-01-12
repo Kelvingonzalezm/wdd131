@@ -7,8 +7,9 @@
     --muted-text-color: #555555;
     --border-color: #dcdcdc;
     --hover-color: #14535a;
-    --hover-bg-color: rgba(255, 255, 255, 0.2);
-    --shadow-color: rgba(0, 0, 0, 0.08);
+    --hover-bg-color: #2a7f88;
+    --shadow-color: #00000014;
+    --white-color: #ffffff;
 }
 
 h1,
@@ -62,7 +63,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--hover-bg-color);
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 main {
