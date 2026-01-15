@@ -1,10 +1,12 @@
 :root {
     --color-background: #f5f5f5;
     --color-text: #333333;
-    --color-header-footer: #8c7b75;
-    --color-links: #ffffff;
+    --color-header-footer: #6b5b50;
+    --color-links: #f2f2f2;
     --color-figcaption: #555555;
     --color-detail: #d4cfc9;
+    --color-figure-bg: #ffffff;
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -14,11 +16,7 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -39,11 +37,10 @@ figcaption {
 }
 
 figure {
-    background-color: #fff;
-
+    background-color: var(--color-figure-bg);
     padding: 0.5rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px var(--color-box-shadow);
 }
 
 figure img {
