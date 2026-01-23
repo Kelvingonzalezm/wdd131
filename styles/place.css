@@ -1,0 +1,287 @@
+:root {
+    --primary-color: #f4c430;
+    --secondary-color: #0033a0;
+    --accent-color: #ce1126;
+
+    --background-color: #ffffff;
+    --text-color: #222222;
+    --info-bg: #ffffff;
+
+    --shadow-light: rgba(0, 0, 0, 0.12);
+    --shadow-dark: rgba(0, 0, 0, 0.25);
+
+    --font-main: 'Arial', sans-serif;
+
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: var(--spacing-medium);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+section:not(#introduction) {
+    padding: var(--spacing-large);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-medium);
+}
+
+.info-box {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+    background-color: var(--info-bg);
+    box-shadow: 2px 2px 8px var(--shadow-light);
+}
+
+.info-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--spacing-small) 0 0 0;
+    text-align: right;
+}
+
+.info-box li {
+    margin-bottom: var(--spacing-small);
+}
+
+.info-box svg {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.desktop-emoji {
+    display: none;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+
+#introduction {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#introduction picture,
+#introduction img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.data-box,
+.weather-box {
+    position: absolute;
+    background: var(--background-color);
+    max-width: 260px;
+    text-align: right;
+    margin-top: 0.5rem;
+    backdrop-filter: blur(4px);
+    height: auto;
+    overflow: visible;
+}
+
+.data-box {
+    top: 1rem;
+    left: 1rem;
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px var(--shadow-dark);
+}
+
+.data-box h2 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 1rem 5.5rem;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: var(--spacing-small);
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.data-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.weather-box {
+    bottom: 1rem;
+    right: 1rem;
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px var(--shadow-dark);
+}
+
+.weather-box h2 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.4rem 1.5rem;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: var(--spacing-small);
+    margin-top: 0;
+}
+
+.weather-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.weather-box li {
+    margin-bottom: 0.4rem;
+}
+
+.weather-box p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: var(--spacing-medium) 0;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    height: 15px;
+    background-color: var(--secondary-color);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+@media (min-width: 768px) {
+    .desktop-emoji {
+        display: inline;
+    }
+
+    .weather-box h2 {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 1rem;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    .weather-box h2::after {
+        content: "⛅";
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .data-box,
+    .weather-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--spacing-medium);
+    }
+
+    .mobile-weather {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .mobile-weather svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .data-box,
+    .weather-box {
+        position: static;
+        margin-top: 1rem;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .data-box ul,
+    .weather-box ul {
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    html,
+    body {
+        height: auto;
+    }
+
+    #introduction {
+        height: auto;
+        overflow: visible;
+    }
+
+    main {
+        overflow: visible;
+    }
+}
