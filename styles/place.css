@@ -17,14 +17,6 @@
     --spacing-large: 2rem;
 }
 
-body {
-    font-family: var(--font-main);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-}
-
 header {
     background-color: var(--accent-color);
     color: var(--background-color);
@@ -58,11 +50,18 @@ section p {
     box-shadow: 2px 2px 8px var(--shadow-light);
 }
 
-.info-box ul {
+.info-box ul, .data-box ul, .weather-box ul {
     list-style: none;
     padding-left: 0;
-    margin: var(--spacing-small) 0 0 0;
     text-align: right;
+}
+
+.data-box ul, .weather-box ul {
+    margin: 0;
+}
+
+.info-box ul {
+    margin: var(--spacing-small) 0 0 0;
 }
 
 .info-box li {
@@ -134,13 +133,6 @@ section p {
     margin-top: 0;
 }
 
-.data-box ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
-}
-
 .weather-box {
     bottom: 1rem;
     right: 1rem;
@@ -157,13 +149,6 @@ section p {
     display: block;
     margin-bottom: var(--spacing-small);
     margin-top: 0;
-}
-
-.weather-box ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
 }
 
 .weather-box li {
@@ -191,6 +176,9 @@ footer p {
 
 html,
 body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     height: 100vh;
