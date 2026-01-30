@@ -68,6 +68,8 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -126,10 +128,36 @@ main h2 {
 
 #temples-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.25rem;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
     align-items: stretch;
+}
+
+@media (min-width: 600px) {
+    #temples-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-direction: row;
+        max-height: none;
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    #temples-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
