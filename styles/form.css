@@ -1,6 +1,6 @@
 :root {
     --primary-color: #2c6bed;
-    --secondary-colro: #1f2933;
+    --secondary-color: #1f2933;
     --background-color: #f0f4f8;
     --form-background: #ffffff;
     --text-color: #333333;
@@ -9,6 +9,7 @@
     --accent-hover: #1e40af;
     --footer-background: #1f2933;
     --white-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -34,7 +35,7 @@ form {
     margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 label,
@@ -143,11 +144,6 @@ footer {
     fieldset:nth-of-type(2) input[type="checkbox"],
     fieldset:nth-of-type(2) label {
         font-size: 14px;
-    }
-
-    form {
-        margin: 15px;
-        padding: 15px;
     }
 
     fieldset .rating-option {
